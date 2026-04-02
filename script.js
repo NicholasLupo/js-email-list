@@ -21,4 +21,10 @@ const getEmail = (api) => {
 
 }
 
-getEmail(emailApi)
+const btn = document.getElementById('btn');
+btn.addEventListener('click', function (e){
+
+    e.preventDefault();
+    getEmail(emailApi)
+
+})
