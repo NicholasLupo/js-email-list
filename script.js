@@ -4,6 +4,8 @@ const ul = document.getElementById('list')
 const emailApi = 'https://flynn.boolean.careers/exercises/api/random/mail';
 const getEmail = (api) => {
 
+    ul.innerHTML = '';
+
     for (let i = 0; i < 10; i++) {
         
         const li = document.createElement('li');
@@ -22,11 +24,10 @@ const getEmail = (api) => {
 
 }
 
-getEmail(emailApi)
-
 const btn = document.getElementById('btn');
 btn.addEventListener('click', function (e){
-
+    
     e.preventDefault();
+    getEmail(emailApi)
 
 })
